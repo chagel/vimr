@@ -11,149 +11,322 @@
   <meta charset="utf-8">
   <title><% TITLE %></title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      font: 62.5%/1.5 Georgia, serif;
-      color: #444444;
-      background: #f8f8f8 url(data:image/gif;base64,R0lGODlhIAAgAMIGAPPz8/T09PX19fb29vf39/j4+P///////yH5BAEKAAcALAAAAAAgACAAAAPkCFoLVBBERVm08s6qKRgeZDGLiHmScwpZCrAZWQSo605dTFKBvDcim4kjobVCrp7udIzFBhDlpvRawEaNFk6ADf4aDxfrouCmZOfQdPwocMln32njPgaNH1+ljO7jiAt4aDcYJD0Mb1BfeEo6eC1GM3tyA1c3HDhfI0x9cQogTkObe1SWTmoahaBwUaQXNDsWIKxfoT+gJViotD+FWYoSs2k2w7CrKY21QUB0p2rPysKpRL6TVFJyxEXIg15IKZYzm7GI1m9zelTNKW26Nc6kqJNekpqZNTnvSHCEWULaa3QQMpIAADs=);
-    }
-
-    body {
-      text-rendering: optimizeLegibility;
-    }
-
-    #content {
-      padding: 0 4em;
-      margin: 0 auto;
-      overflow: auto;
-    }
-
-    p, li, th, td {
-      font-size: 1.6rem;
-      line-height: 1.5;
-    }
-
-    p {
-      margin-bottom: 1.5em;
-    }
-
-    ul, ol {
-      margin-bottom: 2.4rem;
-    }
-
-    code {
-      font-family: Menlo, monospace;
-      font-size: 1.6rem;
-    }
-
-    li ul, li ol {
-      margin-bottom: 0;
-    }
-
-    li li {
-      margin-left: 1.5em;
-    }
-
-    hr {
-      border: 1px solid #cccccc;
-      margin: 2.2rem 0;
-    }
-
-    blockquote {
-      border-left: 1.2rem solid #cccccc;
-      padding-left: 2.4rem;
-      padding-right: 4.8rem;
-      font-style: italic;
-    }
-
-    h6, h5, h4, h3, h2, h1 {
-      font-family: "Helvetica Neue", sans-serif;
-      color: black;
-    }
-
-    h3, h2, h1 {
-      font-weight: bold;
-    }
-
-    h6 {
+/*
+* This document has been created with Marked.app <http://markedapp.com>.
+* Copyright 2011 Brett Terpstra
+* ---------------------------------------------------------------------------
+* Please leave this notice in place, along with any additional credits below.
+*
+* Byword.css theme is based on Byword.app <http://bywordapp.com>
+* Authors: @brunodecarvalho, @jpedroso, @rcabaco
+* Copyright 2011 Metaclassy, Lda. <http://metaclassy.com>
+*/
+  
+  html {
+      font-size: 62.5%; /* base font-size: 10px */
+  }
+  
+  body {
+      background-color: #f2f2f2;
+      color: #3c3c3c;
+      
+      /* Change font size below */
       font-size: 1.6em;
-      padding-top: 2.4rem;
-    }
-
-    h5 {
-      font-size: 1.8em;
-      padding-top: 2.2rem;
-      line-height: 2.4rem;
-      margin-bottom: 0.2rem;
-    }
-
-    h4 {
-      font-size: 2em;
-      padding-top: 2.1rem;
-      margin-bottom: 0.3rem;
-      line-height: 1.2;
-    }
-
-    h3 {
-      font-size: 2.4em;
-      padding-top: 0.8rem;
-      margin-bottom: 1.6rem;
-      line-height: 2;
-    }
-
-    h2 {
-      font-size: 3.6em;
-      padding-top: 0.4rem;
-      margin-bottom: 2rem;
-      line-height: 4.8rem;
-    }
-
-    h1 {
-      font-size: 4.8em;
-      padding-top: 1.2rem;
-      margin-bottom: 1.2rem;
-      line-height: 1.5;
-    }
-
-    h1:first-child {
-      padding-top: 3.6rem;
-    }
-
-    table {
-      border-collapse: collapse;
-      margin-top: 3.6em;
-      margin-bottom: 3.6em;
-      table-layout: fixed;
+      line-height: 1.5em;
+      
+      /* Change font below */
+      
+      /* Sans-serif fonts */
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      /*-webkit-font-smoothing: antialiased;*/
+      
+      /* Serif fonts */
+      /*
+       font-family: "Cochin", "Baskerville", "Georgia", serif;
+       -webkit-font-smoothing: subpixel-antialiased;
+       */
+      
+      /* Monospaced fonts */
+      /*
+       font-family: "Courier New", Menlo, Monaco, mono;
+       -webkit-font-smoothing: antialiased;
+       */
+      
+      margin: auto;
+      max-width: 42em;
+  }
+  a {
+      color: #308bd8;
+      text-decoration:none;
+  }
+  a:hover {
+      text-decoration: underline;
+  }
+  /* headings */
+  h1, h2 {
+      line-height:1.2em;
+      margin-top:32px;
+      margin-bottom:12px;
+  }
+  h1:first-child {
+      margin-top:0;
+  }
+  h3, h4, h5, h6 {
+      margin-top:12px;
+      margin-bottom:0;
+  }
+  h5, h6 {
+      font-size:0.9em;
+      line-height:1.0em;
+  }
+  /* end of headings */
+  p {
+      margin:0 0 24px 0;
+  }
+  p:last-child {
+      margin:0;
+  }
+  #wrapper hr {
       width: 100%;
-    }
-
-    th {
-      font-weight: normal;
-    }
-
-    th, td {
-      border-top: 0.063em solid #cccccc;
-      padding: .6875em 1em .75em;
-      vertical-align: top;
-    }
-
-    th[scope="row"] {
-      padding-left: 0;
-      text-align: left;
+      margin: 3em auto;
+      border: 0;
+      color: #eee;
+      background-color: #ccc;
+      height: 1px;
+      -webkit-box-shadow:0px 1px 0px rgba(255, 255, 255, 0.75);
+  }
+  /* lists */
+  ol {
+      list-style: outside decimal;
+  }
+  ul {
+      list-style: outside disc;
+  }
+  ol, ul {
+      padding-left:0;
+      margin-bottom:24px;
+  }
+  ol li {
+      margin-left:28px;
+  }
+  ul li {
+      margin-bottom:8px;
+      margin-left:16px;
+  }
+  ol:last-child, ul:last-child {
+      margin:0;
+  }
+  li > ol, li > ul {
+      padding-left:12px;
+  }
+  dl {
+      margin-bottom:24px;
+  }
+  dl dt {
+      font-weight:bold;
+      margin-bottom:8px;
+  }
+  dl dd {
+      margin-left:0;
+      margin-bottom:12px;
+  }
+  dl dd:last-child, dl:last-child {
+      margin-bottom:0;
+  }
+  /* end of lists */
+  pre {
+      white-space: pre-wrap;
+      width: 96%;
+      margin-bottom: 24px;
+      overflow: hidden;
+      padding: 3px 10px;
+      -webkit-border-radius: 3px;
+      background-color: #eee;
+      border: 1px solid #ddd;
+  }
+  code {
       white-space: nowrap;
-    }
-
-    .numeric {
-      text-align: right;
-    }
-
-    td.numeric {
-      font-family: Menlo, monospace;
-    }
+      font-family: Monaco, "Courier New", Menlo, mono;
+      font-size: 0.9em;
+      padding: 2px;
+      -webkit-border-radius: 3px;
+      background-color: #eee;
+      border: 1px solid #ddd;
+  }
+  pre code {
+      white-space: pre-wrap;
+      border: none;
+      padding: 0;
+      background-color: transparent;
+      -webkit-border-radius: 0;
+  }
+  blockquote {
+      margin-left: 0;
+      margin-right: 0;
+      width: 96%;
+      padding: 0 10px;
+      border-left: 3px solid #ddd;
+      color: #777;
+  }
+  table {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      border-spacing: 0;
+  }
+  table th {
+      padding: 3px 10px;
+      background-color: #eee;
+      border-top: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+  }
+  table tr {
+  }
+  table td {
+      padding: 3px 10px;
+      border-top: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+  }
+  caption {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+  figure {
+      display: block;
+      text-align: center;
+  }
+  #wrapper img {
+      border: none;
+      display: block;
+      margin: 1em auto;
+      max-width: 100%;
+  }
+  figcaption {
+      font-size: 0.8em;
+      font-style: italic;
+  }
+  mark {
+      background: #fefec0;
+      padding:1px 3px;
+  }
+  
+  
+  /* classes */
+  
+  .markdowncitation {
+  }
+  .footnote {
+      font-size: 0.8em;
+      vertical-align: super;
+  }
+  .footnotes ol {
+      font-weight: bold;
+  }
+  .footnotes ol li p {
+      font-weight: normal;
+  }
+  
+  /* custom formatting classes */
+  
+  .shadow {
+      -webkit-box-shadow: 0 2px 4px #999;
+  }
+  
+  .source {
+      text-align: center;
+      font-size: 0.8em;
+      color: #777;
+      margin: -40px;
+  }
+  
+  @media screen {
+      .inverted, .inverted #wrapper {
+          background-color: #1a1a1a !important;
+          color: #bebebe !important;
+          
+          /* SANS-SERIF */
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+          -webkit-font-smoothing: antialiased !important;
+          
+          /* SERIF */
+          /*
+           font-family: "Cochin", "Baskerville", "Georgia", serif !important;
+           -webkit-font-smoothing: subpixel-antialiased !important;
+           */
+          /* MONO */
+          /*
+           font-family: "Courier", mono !important;
+           -webkit-font-smoothing: antialiased !important;
+           */
+      }
+      .inverted a {
+          color: #308bd8 !important;
+      }
+      .inverted hr {
+          color: #666 !important;
+          border: 0;
+          background-color: #666 !important;
+          -webkit-box-shadow: none !important;
+      }
+      .inverted pre {
+          background-color: #222 !important;
+          border-color: #3c3c3c !important;
+      }
+      .inverted code {
+          background-color: #222 !important;
+          border-color: #3c3c3c !important;
+      }
+      .inverted blockquote {
+          border-color: #333 !important;
+          color: #999 !important;
+      }
+      .inverted table {
+          border-color: #3c3c3c !important;
+      }
+      .inverted table th {
+          background-color: #222 !important;
+          border-color: #3c3c3c !important;
+      }
+      .inverted table td {
+          border-color: #3c3c3c !important;
+      }
+      .inverted mark {
+          background: #bc990b !important;
+          color:#000 !important;
+      }
+      .inverted .shadow { -webkit-box-shadow: 0 2px 4px #000 !important; }
+      #wrapper {
+          background: transparent;
+          margin: 40px;
+      }
+  }
+  
+  /* Printing support */
+  @media print {
+      body {
+          overflow: auto;
+      }
+      img, pre, blockquote, table, figure {
+          page-break-inside: avoid;
+      }
+      pre, code {
+          border: none !important;
+      }
+      #wrapper {
+          background: #fff;
+          position: relative;
+          text-indent: 0px;
+          padding: 10px;
+          font-size:85%;
+      }
+      .footnotes {
+          page-break-before: always;
+      }
+  }
+  
   </style>
 </head>
 <body>
